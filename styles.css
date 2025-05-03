@@ -1,0 +1,165 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f7f6;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #ffda79;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  border-bottom: 3px solid #f7c948;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+.tiles {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tile {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  flex: 1 1 300px;
+  min-width: 260px;
+  max-width: 340px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tile img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.newsletter {
+  background: #f7c948;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.newsletter h3 {
+  margin-top: 0;
+}
+.podcast-embed-container {
+  width: 100%;
+  max-width: 340px;
+  margin: 1rem auto 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.podcast-embed-container iframe {
+  border: none;
+  display: block;
+}
+.audio-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+  align-items: flex-start;
+}
+.audio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 6px;
+  padding: 0.4em 0.8em;
+  transition: background 0.2s;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.2em;
+}
+.play-icon {
+  display: none; /* Hide old play icon */
+}
+.waveform {
+  display: inline-flex;
+  align-items: flex-end;
+  height: 1em;
+  margin-right: 0.5em;
+}
+.waveform span {
+  display: block;
+  width: 3px;
+  height: 60%;
+  margin: 0 1px;
+  border-radius: 1px;
+  animation: wave 1s infinite;
+}
+.waveform span:nth-child(2) { animation-delay: 0.2s; height: 80%; }
+.waveform span:nth-child(3) { animation-delay: 0.4s; height: 100%; }
+.waveform span:nth-child(4) { animation-delay: 0.6s; height: 80%; }
+.waveform span:nth-child(5) { animation-delay: 0.8s; height: 60%; }
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.8); }
+}
+/* YouTube colors */
+.youtube-link {
+  color: #fff;
+  background: #ff0000;
+}
+.youtube-link .waveform span {
+  background: #fff;
+}
+.youtube-link:hover {
+  background: #cc0000;
+}
+/* Spotify colors */
+.spotify-link {
+  color: #fff;
+  background: #1db954;
+}
+.spotify-link .waveform span {
+  background: #fff;
+}
+.spotify-link:hover {
+  background: #159c41;
+}
+@media (max-width: 800px) {
+  .tiles {
+    flex-direction: column;
+    gap: 0;
+  }
+  .tile {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .container { padding: 1rem; }
+  header h1 { font-size: 2rem; }
+} 

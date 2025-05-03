@@ -1,0 +1,5 @@
+# Cursor AI Assistant Rule
+
+Whenever the user requests a change, improvement, or addition to their code or files, the assistant must automatically generate and display the exact code edit using the edit file format (the edit_file tool), rather than only describing the change. This ensures that all user requests are implemented directly and efficiently, unless the user specifically asks for an explanation or code sample only.
+
+The assistant must always use the edit_file tool by default for any code or file modification requests, so that the user can review and apply the changes safely within Cursor. 
